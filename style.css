@@ -1,0 +1,902 @@
+/****** GLOBAL ******/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  min-height: 100%;
+}
+
+body{
+/*  background-image: url('images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-width: 100%;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.heading1{
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+/********** HEADING 3 TAG // UNIVERSITY WORK *********/
+.container div:nth-of-type(1){
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+/********** HEADING 3 TAG // COMING SOON *********/
+.container div:nth-of-type(6){
+  flex-basis: 100%;
+  margin: 20px 0px;
+}
+
+.work h3{
+  text-align: center;
+  font-size: 20px;
+}
+
+.note{
+  position: absolute;
+  bottom: 70px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.note{
+  opacity: 1;
+}
+
+/******** GLOBAL ENDS HERE ********/
+
+/* ------- */
+
+/******** HEADER / NAVIGATION BAR ********/
+header{
+  width: 80%;
+  height: 150px;
+  color: #fff;
+  padding-top: 20px;
+  margin: 0 auto;
+  /****** MAKES THE HEADER TRANSPARENT ******/
+  /* background: rgba(204, 204, 204, 0.2); */  /*** RGBA (Red, Green, Blue, Alpha (Opacity) ) ***/
+}
+
+header ul{
+  width: 100%;
+  max-width: 500px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+header li{
+  padding: 15px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+ul li a{
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+/* Each li social media colour corresponds to their own colour */
+/* ------- TWITTER ---- */
+ul li:nth-child(1) a{
+  color: #55acee;
+}
+/* ------- FACEBOOK ---- */
+/* ul li:nth-child(2) a{
+  color: #3b5999;
+} */
+/* ------- INSTAGRAM ---- */
+/* ul li:nth-child(3) a{
+  color: #e4405f;
+} */
+/* ------- LINKEDIN ---- */
+ul li:nth-child(2) a{
+  color: #0077B5;
+}
+/* ------- GITHUB ---- */
+ul li:nth-child(3) a{
+  color: #fff;
+}
+
+ul li a:hover{
+  color: #fff;
+}
+/* --- HOVER FOR GITHUB --- */
+ul li:nth-child(3) a:hover{
+  color: #000;
+}
+
+ul li a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  border-radius: 10%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+ul li a:hover::before{
+  transform: scale(1);
+}
+
+/* nth-child - every other li's background colour changes colour */
+/* ------- TWITTER ---- */
+ul li:nth-child(1) a:hover::before{
+  background: #55acee;
+}
+/* ------- FACEBOOK ---- */
+/* ul li:nth-child(2) a:hover::before{
+  background: #3b5999;
+} */
+/* ------- INSTAGRAM ---- */
+/* ul li:nth-child(3) a:hover::before{
+  background: #e4405f;
+} */
+/* ------- LINKEDIN ---- */
+ul li:nth-child(2) a:hover::before{
+  background: #0077b5;
+}
+/* ------- GITHUB ---- */
+ul li:nth-child(3) a:hover::before{
+  background: #fff;
+}
+/********* PORTFOLIO WELCOME SECTION *********/
+
+/**** PORTFOLIO SPAN TEXT ****/
+/*
+section .pfolio:hover{
+  color: #fff;
+  border-top: solid #fff000 2px;
+  border-bottom: solid #fff000 2px;
+  border-top-left-radius: 20px;
+}
+*/
+
+
+/************* ************/
+.pfolio{
+  display: inline-block;
+  color: #000;
+}
+span{
+  animation-delay: 2s;
+}
+
+#welcome{
+  min-height: 680px;
+  text-align: center;
+  color: #fff;
+}
+
+#welcome .container{
+  min-height: 400px;
+}
+
+#welcome h1{
+  padding-top: 100px;
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-family: 'Acme', sans-serif;
+  word-spacing: 10px;
+  animation-delay: 1s;
+}
+
+#welcome p{
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  animation-delay: 3s;
+}
+
+
+/***********************/
+/* ------ BOXES ------*/
+/**********************/
+#boxes .container{
+  max-width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/********** FIRST BOX **********/
+.box-1{
+  background-image: url('images/tb.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-1 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-1:hover h2{
+  opacity: 1;
+}
+
+.box-1 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-1:hover p{
+  opacity: 1;
+}
+
+#mainButton{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-1:hover #mainButton{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/********** SECOND BOX **********/
+.box-2{
+  background-image: url('images/prisonEscape4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-2 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-2:hover h2{
+  opacity: 1;
+}
+
+.box-2 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 80px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-2:hover p{
+  opacity: 1;
+}
+
+/************ BUTTON *************/
+#mainButton2{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-2:hover #mainButton2{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/************** THIRD BOX **************/
+.box-3{
+  background-image: url('images/img_manipulation_app.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-3 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-3:hover h2{
+  opacity: 1;
+}
+
+.box-3 p{
+  position: absolute;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-3:hover p{
+  opacity: 1;
+}
+
+#mainButton3{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-3:hover #mainButton3{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/********** FOURTH BOX *********/
+.box-4{
+  background-image: url('images/sound_mixer.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-4 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+  text-transform: capitalize;
+}
+
+.box-4:hover h2{
+  opacity: 1;
+}
+
+.box-4 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-4:hover p{
+  opacity: 1;
+}
+
+#mainButton4{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-4:hover #mainButton4{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/*************** COMING SOON // FIFTH BOX **************/
+.box-5{
+  background-image: url('images/colourGame.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-5 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-5:hover h2{
+  opacity: 1;
+}
+
+.box-5 p{
+  position: absolute;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-5:hover p{
+  opacity: 1;
+}
+
+#mainButton5{
+  position: absolute;
+  bottom: 0;
+  padding: 7px 5px;
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 15px !important;
+  left: 30%;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-5:hover #mainButton5{
+  opacity: 1;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ----- 6th BOX ----- */
+.box-6{
+  background-image: url('images/turkey_cs.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 260px;
+  transition: transform .5s;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-6 h2{
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-6:hover h2{
+  opacity: 1;
+}
+
+.box-6 p{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  padding-top: 50px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.box-6:hover p{
+  opacity: 1;
+}
+
+/************** EDUCATION **************/
+.university{
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.university > *{
+  padding: 10px;
+}
+
+.university h3:nth-of-type(1){
+  color: #A9A9A9;
+}
+
+.university ul{
+  list-style-type: none;
+}
+
+.university li{
+  padding: 5px;
+}
+
+.university li:nth-child(odd){
+  color: #A9A9A9;
+}
+
+.college{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.college > *{
+  padding: 10px;
+}
+
+.college h3:nth-of-type(1){
+  color: #A9A9A9;
+}
+
+/******** SKILLS ********/
+.skills{
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.skills h1{
+  margin-bottom: 20px;
+}
+
+.skills ul{
+  list-style-type: none;
+}
+
+.skills li{
+  padding: 5px;
+}
+
+.skills li:nth-child(odd){
+  color: #A9A9A9;
+}
+
+/***************** CONTACT FORM *****************/
+#contact{
+  max-width: 80%;
+  margin: 100px auto;
+}
+
+#contact .container{
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#contactForm{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#contactForm h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.details{
+  max-width: 500px;
+  margin: 15px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+label{
+  margin-bottom: 10px;
+}
+
+input[type=text], input[type=email]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+input[type=submit]{
+  width: 200px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-family: inherit;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+textarea{
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  resize: none;
+  font-size: 16px;
+  border: 2px solid;
+}
+
+#contactForm textarea::placeholder{
+  font-size: 16px;
+}
+
+/* --------------------------------------- */
+/* ----------- MEDIA QUERIES --------------*/
+
+/* ------------ T A B L E T ------------- */
+@media only screen and (max-width: 768px) {
+
+  #welcome{
+    min-height: 500px;
+    margin-top: 10px;
+  }
+
+  #welcome .container{
+    min-height: 400px;
+  }
+
+  #welcome h1{
+    padding-top: 50px;
+  }
+}
+
+/* --------- M O B I L E ( L ) -----------*/
+@media only screen and (max-width: 425px) {
+
+  body{
+    background: #1f1e1c;
+  }
+
+  .pfolio{
+    color: #006400;
+  }
+
+  #welcome{
+    min-height: 600px;
+  }
+
+  #welcome .container{
+    min-height: 550px;
+  }
+
+  #welcome h1 {
+    padding-top: 50px;
+    color: #fff;
+  }
+
+  #welcome p {
+    margin-top: 50px;
+    color: #fff;
+  }
+
+  #boxes .container{
+    background: #e0e1e3;
+    margin-top: 30px;
+  }
+
+  #boxes h3{
+    color: #000;
+  }
+
+  .university{
+    margin-top: 90px;
+  }
+}
+
+/* ---------- M O B I L E ( M ) -------- */
+@media only screen and (max-width: 375px) {
+  #welcome{
+    min-height: 700px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #welcome{
+    min-height: 750px;
+  }
+}

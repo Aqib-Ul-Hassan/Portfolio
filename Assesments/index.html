@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+<script type="text/javascript" src="imageExample1.js"></script>
+
+</head>
+
+<body>
+	<p>
+		<div id='aDiv1'>
+			<div id='srcImgDiv'></div>
+
+			<script type="text/javascript">
+				srcImg();
+			</script>
+		</div>
+		<br>
+
+
+<select id="imgeffect" onchange="">
+
+	<optgroup label="Greyscale">
+    <option value="Greyscale">Greyscale</option>
+	</optgroup>
+
+	<optgroup label="Invert">
+    <option value="Invert">Invert</option>
+	</optgroup>
+
+	<optgroup label="Hue">
+	<option value="RedHue">Red Hue</option>
+	<option value="GreenHue">Green Hue</option>
+	<option value="BlueHue">Blue Hue</option>
+	</optgroup>
+
+	<optgroup label="Blur">
+	<option value="Blur">Blur</option>
+	</optgroup>
+
+	<optgroup label="Thresholding">
+	<option value="Thresholding">Thresholding</option>
+	</optgroup>
+
+	<optgroup label="Sharpen">
+	<option value="Sharpen">Sharpen</option>
+	</optgroup>
+
+	<optgroup label="Edge Detection">
+	<option value="EdgeDetection">EdgeDetection</option>
+	</optgroup>
+</select>
+
+<button type ="button" onclick="Effect()"> Change Effect </button>
+
+
+		<div id='aDiv2'>
+			<canvas id="canvas" width="300" height="300"></canvas>
+			<br>
+		</div>
+	</p>
+</body>
+</html>

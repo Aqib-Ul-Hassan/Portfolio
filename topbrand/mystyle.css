@@ -1,0 +1,383 @@
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background: #e7e7e7 url(images/bg-carbonfibre.jpg) no-repeat top center;
+		color: #7d7d7d;
+		font-size: 13pt;
+		line-height: 1.75em;
+		text-align: justify;
+		margin: 0;
+		padding: 0;
+	}
+
+	body,input {
+		font-family: 'Arvo', serif;
+	}
+
+/********** Link on contact us page *******/
+	a {
+		color: #ac1205;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+
+
+
+	br.clear {
+		clear: both;
+	}
+
+	h1,h2,h3,h4 {
+		font-weight: normal;
+	}
+
+
+	h2 {
+		font-size: 1.75em;
+	}
+
+	h2,h3,h4 {
+		color: #BABABA;
+		font-family: 'Arvo', serif;
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+
+	}
+
+	h4 {
+		font-size: 1.05em;
+	}
+
+	img.left {
+		float: left;
+		margin: 8px 20px 20px 0;
+	}
+
+	img.top {
+		margin: 8px 0 20px 0;
+	}
+
+	p {
+		margin-bottom: 1.5em;
+	}
+
+	ul {
+		margin-bottom: 1.5em;
+	}
+
+	#wrapper {
+		width: 980px;
+		margin: 0 auto;
+	}
+
+/******************************************************************************************
+* HEADER
+******************************************************************************************/
+
+	#header {
+		position: relative;
+		width: 980px;
+		height: 180px;
+		margin: 0;
+		padding: 0;
+	}
+
+/******************************************************************************************
+* LOGO
+******************************************************************************************/
+
+	#logo {
+		position: absolute;
+		top: -250px;
+		left: 10px;
+	}
+
+
+
+
+/******************************************************************************************
+* MENU
+******************************************************************************************/
+
+
+	#nav {
+		font-family: 'Arvo', serif;
+		height: 70px;
+		line-height: 50px;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		z-index: 99;
+	}
+
+	#nav a {
+		color: #fff;
+		text-decoration: none;
+		text-transform: lowercase;
+	}
+
+	#nav .current a {
+		color: #fff;
+
+	}
+
+	#nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	#nav ul li {
+		display: block;
+		float: left;
+		padding: 0 8px 0 8px;
+	}
+
+
+
+/******************************************************************************************
+* PAGE
+******************************************************************************************/
+
+	#page {
+		width: 940px;
+		background: #FFF;
+		margin: 50;
+		padding: 20px;
+	}
+
+	.buy {
+		float: right;
+		color: #fff;
+		text-transform: lowercase;
+		padding: 6px 10px;
+		background: #000000;
+		border: none;
+		border-radius: 10px;
+
+	}
+
+/******************************************************************************************
+* PRODUCTS
+******************************************************************************************/
+
+	#products {
+		width: 980px;
+		background: #fff;
+		margin: 0;
+		padding: 0;
+	}
+
+	#products ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#products li {
+		width: 300px;
+		height: 300px;
+		display: block;
+		float: left;
+		margin: 0 0 20px 20px;
+		position: relative;
+		padding: 0;
+	}
+
+	#products span {
+		position: absolute;
+		width: 280px;
+		padding: 10px;
+		bottom: 0;
+		left: 0;
+		background: url(images/bg.png);
+		color: #FFF;
+	}
+
+	#products .buy {
+		float: right;
+		color: #fff;
+		text-transform: lowercase;
+		padding: 3px 5px;
+		background: #000000;
+		border: none;
+		border-radius: 10px;
+		text-shadow: 1px 1px 1px #000;
+		font-size: 11px;
+	}
+/******************************************************************************************
+* FOOTER
+******************************************************************************************/
+
+	#footer {
+		width: 980px;
+		padding: 0 10px;
+		background: url(images/.jpg) no-repeat bottom center;
+		height: 58px;
+		margin: 0 auto;
+	}
+
+	#copyright {
+		margin: 40px auto;
+		width: 980px;
+		text-align: center;
+		color: #FFF;
+	}
+
+/*****************************************************************************
+/ SliderTron
+*****************************************************************************/
+
+#slidertron
+{
+	width: 940px;
+	position: relative;
+}
+
+#slidertron .navigation
+{
+	position: absolute;
+	display: block;
+	z-index: 100;
+	color: #ffffff;
+	top: 315px;
+	right: 0px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #303030;
+	opacity: 0.75;
+}
+
+#slidertron .navigation a
+{
+	color: #ffffff;
+	text-decoration: none;
+	outline: none;
+}
+
+#slidertron .viewer
+{
+	width: 940px;
+	height: 425px;
+}
+
+#slidertron .viewer .reel .slide
+{
+	position: relative;
+	width: 940px;
+	height: 425px;
+}
+
+#slidertron .viewer .reel .slide span
+{
+	position: absolute;
+	display: block;
+	width: 900px;
+	opacity: 0.90;
+	padding: 20px;
+	background: url(images/bg.png);
+	color: #ffffff;
+	bottom: 0px;
+	left: 0px;
+}
+
+#slidertron .indicator
+{
+	margin: 20px 0 0 0;
+	width: 940px;
+	height: 25px;
+	text-align: center;
+}
+
+#slidertron .indicator ul
+{
+	list-style: none;
+	padding: 0;
+}
+
+	#slidertron .indicator ul li
+	{
+		display: inline-block;
+		background: #d0d0d0;
+		color: #303030;
+		width: 10px;
+		height: 10px;
+		margin: 0 10px 0 0;
+		text-indent: -9999px;
+		border-radius: 10px;
+	}
+
+	#slidertron .indicator ul li.active
+	{
+		background: #9ec64e;
+		color: #d0d0d0;
+	}
+
+/**********Welcome**********/
+
+#strapline
+{ width: 940px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;}
+
+  #welcome_slogan
+{ width: 940px;
+  float: left;
+  height: 0px;
+  padding-top: 40px;
+  margin: 0 auto;}
+
+  #welcome_slogan H3
+{ font: bold 300% Copperplate Gothic Bold;
+  letter-spacing: -3px;
+  color: #FFF;}
+
+  span
+{ color: #CCCCCC;
+  text-shadow: none;}
+
+  /*************Photo Gallery***********/
+  body {
+background: #999
+margin-top: 20px;
+}
+
+h3 {
+color: #eee;
+font-family: Verdana;
+}
+
+.thumbnails img {
+height: 80px;
+border: 4px solid #555;
+padding: 1px;
+margin: 0 10px 10px 0;
+}
+
+.thumbnails img:hover {
+border: 4px solid #00ccff;
+cursor:pointer;
+}
+
+.preview img {
+border: 4px solid #444;
+padding: 1px;
+height: 300px;
+}
+
+
+body {
+background-color: #000000; font-family: sans-serif }
+h1 { font-family: helvetica; color: FFFFFF }
+.center {text-align: center}

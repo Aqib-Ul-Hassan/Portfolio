@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Top Brands / Registration</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="mystyle.css" />
+		<link rel="alternate stylesheet" type="text/css" media="screen" title="green-theme" href="green-abstract.css" />
+		<link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="blue-abstract.css" />	
+		
+		<script src="styleswitch.js" type="text/javascript">
+/***********************************************
+* Style Sheet Switcher v1.1- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+		
+		<script language="JavaScript">
+function confirmform(myForm) {
+//RegEx for validating name field. Name can only have alphabets
+//minimum 2 letters and maximum 32 letters
+//only white spaces are allowed
+var regexLetter = /^([a-zA-Z\s]{2,32})$/;
+//email regular expression
+var regexEmail=/^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
+
+var regexNumber=/^([0-9-+]{11})$/;
+
+//checks if the name field has been left blank
+if (myForm.txtFirstName.value=="") {
+	alert("Please Enter Your First Name");
+	myForm.txtFirstName.focus( );
+	return false;
+}
+
+//checks if the name field has less than 2 letters or if it is not alphabet
+if(!regexLetter.test(myForm.txtFirstName.value)){
+	alert('Invalid First Name! Please enter atleast 2 alphabets');
+	myForm.txtFirstName.focus( );
+	return false;
+}
+
+
+
+
+//checks if the email address is valid
+	if(!regexEmail.test(myForm.txtemail.value)) {
+	alert("Please Enter Valid Email Address");
+	myForm.txtemail.focus( );
+	return false;
+}
+
+//Checks if 11 numbers are entered
+if(!regexNumber.test(myForm.txtNumber.value)) {
+	alert('Please Enter At Least 11 numbers for your contact number');
+	myForm.txtNumber.focus( );
+	return false;
+}	
+
+}
+</script>
+		
+		
+		<div id="strapline">
+	    <div id="welcome_slogan">
+	      <h3>Regis<span>tration</span></h3>
+	    </div><!--close welcome_slogan-->
+      </div><!--close strapline-->	
+		
+		
+</head>
+
+<body>
+	<form id="switchform">
+		<input type="radio" name="choice" value="black-theme" onClick="chooseStyle(this.value, 60)">Default style
+		<input type="radio" name="choice" value="green-theme" onClick="chooseStyle(this.value, 60)">Green
+		<input type="radio" name="choice" value="blue-theme" onClick="chooseStyle(this.value, 60)">Blue
+	</form>
+	
+	<div id="wrapper">
+
+
+	<div id="header">
+	<!-----Navigation Bar----->
+		<div id="nav">
+			<ul>
+			<li class="first current">
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="mensclothing.html">Men's Clothing</a>
+						
+			</li>
+			<li>
+				<a href="mensfootwear.html">Men's Footwear</a>
+			</li>
+			<li>
+				<a href="contactus.html">Contact Us</a>
+			</li>
+			<li>
+				<a href="form.html">Form</a>
+			</li>
+			<li class="last">
+				<a href="registration.html">Registration</a>
+			</li>
+			</ul>
+		<br class="clear" />
+		</div>
+				
+	</div>	
+			
+			<div id="page">
+			<center>
+			<form name="demo" method="POST" onsubmit="return confirmform(this)" action="">
+				First name: <input type="text" name="txtFirstName"><br>
+			<br>
+				Last name: <input type="text" name="txtLastName"><br>
+			<br>
+				DOB: <input type="date" name="txtID"><br>
+			<br>
+				User ID: <input type="text" name="txtUserid"><br>
+			<br>
+				Email address: <input type="text" name="txtemail"><br>
+			<br>
+				Contact number: <input type="text" name="txtNumber"><br>
+			<br>
+			<input type="submit" value="Submit">
+			</center>
+			</div>
+			
+</body>
+</html>

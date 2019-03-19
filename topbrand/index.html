@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+	<title>Top Brands</title>
+
+
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="mystyle.css" />
+		<link rel="alternate stylesheet" type="text/css" media="screen" title="green-theme" href="green-abstract.css" />
+		<link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="blue-abstract.css" />
+
+		<script src="styleswitch.js" type="text/javascript"></script>
+	</head>
+	<script>
+//********JS for Clock*******//
+function startTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+	//***Checks the time for minutes***//
+	m = checkTime(m);
+	//***Checks the time for seconds***//
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML = h+":"+m+":"+s;
+    var t = setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+	</script>
+
+		<!-----Body Starts Here----->
+
+		<body onload="startTime()">
+		<div id="txt"></div>
+
+		<div id="strapline">
+	    <div id="welcome_slogan">
+	      <h3>Top <span>Brands</span></h3>
+	    </div><!--close welcome_slogan-->
+      </div><!--close strapline-->
+
+
+
+	<form id="switchform">
+		<input type="radio" name="choice" value="black-theme" onClick="chooseStyle(this.value, 60)">Default style
+		<input type="radio" name="choice" value="green-theme" onClick="chooseStyle(this.value, 60)">Green
+		<input type="radio" name="choice" value="blue-theme" onClick="chooseStyle(this.value, 60)">Blue
+	</form>
+
+		<div id="wrapper">
+
+			<div id="header">
+
+				<div id="nav">
+					<ul>
+						<li class="first current">
+							<a href="index.html">Home</a>
+						</li>
+
+						<li>
+							<a href="mensclothing.html">Men's Clothing</a>
+						</li>
+
+						<li>
+							<a href="mensfootwear.html">Men's Footwear</a>
+						</li>
+
+						<li>
+							<a href="contactus.html">Contact Us</a>
+						</li>
+
+						<li>
+							<a href="form.html">Form</a>
+						</li>
+
+						<li class="last">
+							<a href="registration.html">Registration</a>
+						</li>
+
+					</ul>
+					<br class="clear" />
+				</div>
+
+			</div>
+			<!-- END HEADER -->
+
+	<div class="thumbnails" align="center">
+		<img onmouseover="preview.src=img1.src" id="img1" src="images/timberland_boots.jpg" alt="Image Not Loaded"/>
+		<img onmouseover="preview.src=img2.src" id="img2" src="images/henley_tshirt.jpg" alt="Image Not Loaded"/>
+		<img onmouseover="preview.src=img3.src" id="img3" src="images/gio_goi_tshirt.jpg" alt="Image Not Loaded"/>
+		<img onmouseover="preview.src=img4.src" id="img4" src="images/crosshatch_jeans.jpg" alt="Image Not Loaded"/>
+
+</div><br/>
+
+<div class="preview" align="center">
+	<img id="preview" src="1.jpg" alt="No Image Loaded"/>
+</div>
+			<!-- END PAGE -->
+
+			<div id="products">
+				<ul>
+					<li><a href="mensfootwear.html"><img src="images/timberland_boots.jpg" width="300" height="300" alt="" /></a><span>Boots  <a href="mensfootwear.html" class="buy">Buy Now</a></li>
+					<li><a href="mensfootwear.html"><img src="images/nike_trainers.jpg" width="300" height="300" alt="" /></a><span>Trainers  <a href="mensfootwear.html" class="buy">Buy Now</a></li>
+					<li><a href="mensfootwear.html"><img src="images/adidas_slippers.jpg" width="300" height="300" alt="" /></a><span>Slippers  <a href="mensfootwear.html" class="buy">Buy Now</a></li>
+					<li><a href="mensclothing.html"><img src="images/gio_goi_tshirt.jpg" width="300" height="300" alt="" /></a><span>T-shirts  <a href="mensclothing.html" class="buy">Buy Now</a></li>
+					<li><a href="mensclothing.html"><img src="images/jack_wolfskin_jacket.jpg" width="300" height="300" alt="" /></a><span>Jackets  <a href="mensclothing.html" class="buy">Buy Now</a></li>
+					<li><a href="mensclothing.html"><img src="images/shirt.jpg" width="300" height="300" alt="" /></a><span>Shirts  <a href="mensclothing.html" class="buy">Buy Now</a></li>
+					</ul>
+				<br class="clear" />
+			</div>
+
+		</div>
+		<!-- END WRAPPER -->
+
+		<div id="footer">
+
+		</div>
+
+		<div id="copyright">
+			Images being used are only for educational and academic purposes
+
+		</div>
+
+	</body>
+</html>
